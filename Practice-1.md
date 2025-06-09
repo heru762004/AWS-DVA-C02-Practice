@@ -261,6 +261,107 @@ layout: exam
           Correct answer: D. 
     </details>
 
+23. A financial services company is developing a real-time fraud detection system for its payment processing application. Payment transaction events are sent via an API, and the system must analyze each transaction in real-time to identify and flag potentially fraudulent activities. The solution should support concurrent processing by multiple fraud detection models and monitoring systems while ensuring scalability, low-latency performance, and cost optimization. Which AWS service is best suited to meet these requirements?
+
+    - A. Amazon Data Firehose
+    - B. Amazon Managed Streaming for Apache Kafka (Amazon MSK)
+    - C. Amazon Kinesis Data Streams
+    - D. Amazon Kinesis Agent
+
+    <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: C. 
+    </details>
+
+24. A recruitment agency has a large collection of resumes stored in an Amazon S3 bucket. The agency wants to perform an analysis on these files, but for privacy compliance reasons, they need to ensure that certain personally identifiable information (PII) is redacted before being processed by their internal service. Which solution can meet the requirements in the most cost-effective way?
+
+    - A. Use Amazon S3 Object Lambda to redact PII before it is returned to the application.
+    - B. Implement a solution with AWS Glue to transform the data and redact PII before storing it in an S3 bucket.
+    - C. Configure an Amazon S3 Access Point and set up an Amazon CloudFront distribution with a Lambda@Edge function to redact the PII as data is fetched from the S3 bucket.
+    - D. Use a Lambda function to create a redacted copy of each file in a separate S3 bucket. Then, set up an Amazon S3 Access Point to serve these files.
+
+    <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: A. 
+    </details>
+
+25. A DynamoDB table has several top-level attributes such as id, course_id, course_title, price, rating and many others. The database queries of your application returns all of the item attributes by default but you only want to fetch specific attributes such as the course_id and price per request. As the developer, how can you refactor your application to accomplish this requirement?
+
+    - A. Use filter expressions
+    - B. Use expression attribute names
+    - C. Use projection expression
+    - D. Use condition expressions
+
+    <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: C. 
+    </details>
+
+26. Your application is processing one Kinesis data stream which has four shards, and each instance has one KCL worker. To scale up processing in your application, you reshard your stream to increase the number of open shards to six. What is the MAXIMUM number of EC2 instances that you should launch to achieve optimum performance?
+
+    - A. 6
+    - B. 3
+    - C. 5
+    - D. 12
+
+    <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: A. 
+    </details>
+
+27. An application hosted in a multicontainer Docker platform in Elastic Beanstalk uses DynamoDB to handle the session data of its users. These data are only used in a particular timeframe and the stale data can be deleted after the user logged out of the system. Which of the following is the most suitable way to delete the session data?
+
+    - A. Use conditional writes to add the session data to the DynamoDB table and then automatically delete it based on the condition you specify.
+    - B. Delete the stale data by regularly performing a scan on the table.
+    - C. Enable TTL for the session data in the DynamoDB table.
+    - D. Use atomic counters to track the validity of the session data and delete once it becomes stale.
+
+    <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: C. 
+    </details>
+
+28. A developer uses AWS SAM templates to deploy a serverless application. He needs to embed the application from the AWS Serverless Application Repository or from an S3 bucket as a nested application. Which of the following resource type is the most SUITABLE one that the developer should use?
+
+    - A. WS::Serverless::Application
+    - B. AWS::Serverless::Function
+    - C. AWS::Serverless::LayerVersion
+    - D. AWS::Serverless::Api	
+
+    <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: A. 
+    </details>
+
+29. A programmer is developing a Node.js application that will be run on a Linux server in their on-premises data center. The application will access various AWS services such as S3, DynamoDB, and ElastiCache using the AWS SDK. Which of the following is the MOST suitable way to provide access for the developer to accomplish the specified task?
+
+    - A. Create an IAM role with the appropriate permissions to access the required AWS services and assign the role to the on-premises Linux server. Whenever the application needs to access any AWS services, request for temporary security credentials from STS using the AssumeRole API.	
+    - B. Go to the AWS Console and create a new IAM user with programmatic access. In the application server, create the credentials file at ~/.aws/credentials with the access keys of the IAM user.	
+    - C. Go to the AWS Console and create a new IAM User with the appropriate permissions. In the application server, create the credentials file at ~/.aws/credentials with the username and the hashed password of the IAM User.	
+    - D. Create an IAM role with the appropriate permissions to access the required AWS services. Assign the role to the on-premises Linux server.
+
+    <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: B. 
+    </details>
+
+30. An application hosted in an Auto Scaling group of On-Demand EC2 instances is used to process data polled from an SQS queue, and the generated output is stored in an S3 bucket. To enhance security, you were tasked to ensure that all objects in the S3 bucket are encrypted at rest using server-side encryption with AWS KMS keys. Which of the following is required to properly implement this requirement?
+
+    - A. Add a bucket policy which denies any s3:PutObject action unless the request includes the x-amz-server-side-encryption header.
+    - B. Add a bucket policy which denies any s3:PutObject action unless the request includes the x-amz-server-side-encryption-aws-kms-key-id header.	
+    - C. Add a bucket policy which denies any s3:PostObject action unless the request includes the x-amz-server-side-encryption header.	
+    - D. Add a bucket policy which denies any s3:PostObject action unless the request includes the x-amz-server-side-encryption-aws-kms-key-id header.
+   
+    <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: B. 
+    </details>
+
+
+    
+
+
+
+
+
+
+
+    
+
+
+
 
 
     
