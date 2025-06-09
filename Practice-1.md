@@ -349,6 +349,18 @@ layout: exam
           Correct answer: B. 
     </details>
 
+31. A serverless application consisting of Lambda functions integrated with API Gateway, and DynamoDB processes ad hoc requests that its users send. Due to the recent spike in incoming traffic, some of your customers are complaining that they are getting HTTP 504 errors from time to time. Which of the following is the MOST likely cause of this issue?
+
+    - A. Since the incoming requests are increasing, the API Gateway automatically enabled throttling which caused the HTTP 504 errors.
+    - B. The usage plan quota has been exceeded for the Lambda function.
+    - C. An authorization failure occurred between API Gateway and the Lambda function.
+    - D. API Gateway request has timed out because the underlying Lambda function has been running for more than 29 seconds.
+
+    <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: D. 
+    </details>
+
+
 
     
 
