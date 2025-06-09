@@ -392,6 +392,85 @@ layout: exam
     <details markdown=1><summary markdown='span'>Answer</summary>
           Correct answer: A. 
     </details>
+
+35. A serverless application is composed of several Lambda functions which reads data from RDS. These functions must share the same connection string that should be encrypted to improve data security. Which of the following is the MOST secure way to meet the above requirement?
+
+    - A. Create a Secure String Parameter using the AWS Systems Manager Parameter Store.
+    - B. Use AWS Lambda environment variables encrypted with KMS which will be shared by the Lambda functions.
+    - C. Create an IAM Execution Role that has access to RDS and attach it to the Lambda functions.
+    - D. Use AWS Lambda environment variables encrypted with CloudHSM.
+
+    <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: A. 
+    </details>
+
+36. A Lambda function downloads the same 250 MB file between invocations and stores it in memory for processing. This leads to frequent timeouts and negatively impacts the performance of the serverless application. Which change should be made to resolve the issue most effectively?
+
+    - A. Increase the timeout of the function.
+    - B. Store the file in the /tmp directory of the execution context and reuse it on succeeding invocations.	
+    - C. Increase the memory allocation of the function.
+    - D. Increase the ephemeral storage size of the function
+
+    <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: B. 
+    </details>
+
+37. A Lambda function has been integrated with DynamoDB Streams as its event source. There has been a new version of the function that needs to be deployed using CodeDeploy where the traffic must be shifted in two increments. It should shift 10 percent of the incoming traffic to the new version in the first increment and then the remaining 90 percent should be deployed five minutes later. Which of the following deployment configurations is the MOST suitable to satisfy this requirement?
+
+    - A. Linear
+    - B. Canary
+    - C. Rolling with additional batch
+    - D. All-at-once
+
+    <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: B. 
+    </details>
+
+38. A developer is working on a Lambda function which has an event source mapping to process requests from API Gateway. The function will consistently have 10 requests per second and it will take a maximum of 50 seconds to complete each request. What should the developer do to prevent the function from throttling?
+
+    - A. Submit a Service Limit Increase request to AWS to raise your concurrent executions limit.	
+    - B. Implement traffic shifting in Lambda using Aliases.
+    - C. Use Dead Letter Queues (DLQ) to reprocess failed requests.
+    - D. Do nothing since Lambda will automatically scale to handle the load.
+
+    <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: D. 
+    </details>
+
+39. A developer needs to encrypt all objects being uploaded by their application to the S3 bucket to comply with the company’s security policy. The bucket will use server-side encryption with Amazon S3-Managed encryption keys (SSE-S3) to encrypt the data using 256-bit Advanced Encryption Standard (AES-256) block cipher. Which of the following request headers should the developer use?
+
+    - A. x-amz-server-side-encryption
+    - B. x-amz-server-side-encryption-customer-key-MD5
+    - C. x-amz-server-side-encryption-customer-key
+    - D. x-amz-server-side-encryption-customer-algorithm
+
+    <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: A. 
+    </details>
+
+40. A developer is refactoring a Lambda function that currently processes data using a public GraphQL API. There’s a new requirement to store query results in a database hosted in a VPC. The function has been configured with additional VPC-specific information, and the database connection has been successfully established. However, the engineer has discovered that the function can no longer connect to the internet after testing. Which of the following should the developer do to fix this issue? (Select TWO.)
+
+    - A. Add a NAT gateway to your VPC.
+    - B. Submit a limit increase request to AWS to raise the concurrent executions limit of your Lambda function.
+    - C. Ensure that the associated security group of the Lambda function allows outbound connections.
+    - D. Configure your function to forward payloads that were not processed to a dead-letter queue (DLQ) using Amazon SQS.
+    - E. Set up elastic network interfaces (ENIs) to enable your Lambda function to connect securely to other resources within your private VPC.
+   
+    <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: A, C. 
+    </details>
+
+
+
+
+
+
+
+
+
+
+
+
     
 
 
