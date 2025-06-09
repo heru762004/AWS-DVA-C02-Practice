@@ -595,6 +595,157 @@ How can a developer incorporate this feature in the least amount of development 
           Correct answer: C. 
     </details>
 
+53. A developer is instructed to set up a new serverless architecture composed of AWS Lambda, API Gateway, and DynamoDB in a single stack. The new architecture should allow the developer to locally build, test, and debug serverless applications. Which of the following should the developer use to satisfy the above requirement?
+
+    - A. AWS Elastic Beanstalk
+    - B. AWS CloudFormation
+    - C. AWS Serverless Application Model (AWS SAM)
+    - D. AWS Systems Manager
+
+    <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: C. 
+    </details>
+
+54. You are deploying a serverless application composed of Lambda, API Gateway, CloudFront, and DynamoDB using CloudFormation. The AWS SAM syntax should be used to declare resources in your template which requires you to specify the version of the AWS Serverless Application Model (AWS SAM). Which of the following sections is required, aside from the Resources section, that should be in your CloudFormation template?
+
+    - A. Parameters
+    - B. Format Version
+    - C. Mappings
+    - D. Transform
+
+    <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: D. 
+    </details>
+
+55. A developer is building a Docker application using Amazon ECS. The application requires containers to maintain long-lived connections and access specific ports on the host container instance to send or receive traffic using port mapping. Which component of ECS should the developer configure to properly implement this task?
+
+    - A. Container instance
+    - B. Service scheduler
+    - C. Container Agent
+    - D. Task definition
+   
+    <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: D. 
+    </details>
+
+56. An online stock trading platform is hosted in an Auto Scaling group of EC2 instances with an Application Load Balancer in front to distribute the incoming traffic evenly. The developer must capture information about the IP traffic going to and from network interfaces in your VPC to comply with financial regulatory requirements. Which of the following options should the developer do to meet the requirement?
+
+    - A. Use AWS Inspector to capture information about the IP traffic going to and from the network interfaces of your EC2 instances.
+    - B. Use CloudTrail logs to track all API calls and capture information about the IP traffic going to and from your VPC.
+    - C. Install and run the AWS X-Ray daemon to your EC2 instances using an instance metadata script.
+    - D. Create a flow log in your VPC.
+
+    <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: D. 
+    </details>
+
+57. A web application is uploading large files, which are over 4 GB in size, in an S3 bucket called data.tutorialsdojo.com every 30 minutes. You want to minimize the time required to upload each file. Which of the following should you do to minimize upload time?
+
+    - A. Use the Putltem API.
+    - B. Use the Multipart upload API.
+    - C. Enable Transfer Acceleration in the bucket.
+    - D. Use the BatchWriteItem API.
+
+    <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: B. 
+    </details>
+
+58.  developer is working on an application which stores data to an Amazon DynamoDB table with the DynamoDB Streams feature enabled. He set up an event source mapping with DynamoDB Streams and AWS Lambda function to monitor any table changes then store the original data of the overwritten item in S3. When an item is updated, it should only send a copy of the item’s previous value to an S3 bucket and maintain the new value in the DynamoDB table. Which StreamViewType is the MOST suitable one to use in the DynamoDB configuration to fulfill this scenario?
+
+    - A. NEW_IMAGE	
+    - B. KEYS_ONLY	
+    - C. NEW_AND_OLD_IMAGES	
+    - D. OLD_IMAGE	
+
+    <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: D. 
+    </details>
+
+
+
+59. You developed a shell script which uses AWS CLI to create a new Lambda function. However, you received an InvalidParameterValueException after running the script. What is the MOST likely cause of this issue?
+
+    - A. You have exceeded your maximum total code size per account.
+    - B. The resource already exists.
+    - C. You provided an IAM role in the CreateFunction API which AWS Lambda is unable to assume.	
+    - D. The AWS Lambda service encountered an internal error.
+
+    <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: C. 
+    </details>
+
+60. A Software Engineer is developing an application that will be hosted on an Amazon EC2 instance and read messages from a standard Amazon SQS queue. The average time that it takes for the producers to send a new message to the queue is 10 seconds. Which of the following is the MOST efficient way for the application to query the new messages from the queue?
+
+    - A. Configure the SQS queue to use Long Polling.
+    - B. Configure each message in the SQS queue to have a custom visibility timeout of 10 seconds.
+    - C. Configure an SQS Delay Queue with a value of 10 seconds.
+    - D. Configure the SQS queue to use Short Polling.
+
+    <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: A. 
+    </details>
+
+61. A developer is working with an AWS Serverless Application Model (AWS SAM) application composed of several AWS Lambda functions. The developer runs the application locally on his laptop using sam local commands. While testing, one of the functions returns Access denied errors. Upon investigation, the developer discovered that the Lambda function is using the AWS SDK to make API calls within a sandbox AWS account. Which combination of steps must the developer do to resolve the issue? (Select TWO)
+
+    - A. Use the aws configure command with the --profile parameter to add a named profile with the sandbox AWS account’s credentials.	
+    - B. Create an AWS SAM CLI configuration file at the root of the SAM project folder. Add the AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY environment variables to it.
+    - C. Run the function using sam local invoke with the --parameter-overrides parameter.
+    - D. Add the AWS credentials of the sandbox AWS account to the Globals section of the template.yml file and reference them in the AWS::Serverless::Function properties section of the Lambda function.
+    - E. Run the function using sam local invoke with the --profile parameter.
+
+    <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: A, E. 
+    </details>
+
+62. A developer has deployed a Lambda function that runs in DEV, UAT, and PROD environments. The function uses different parameters that varies based on the environment it is running in. The parameters are currently hardcoded in the function. Which action should the developer do to reference the appropriate parameters without modifying the code every time the environment changes?
+
+    - A. Create individual Lambda Layers for each environment
+    - B. Use environment variables to set the parameters per environment.
+    - C. Create a stage variable called ENV and invoke the Lambda function by its alias name.	
+    - D. Publish three versions of the Lambda function. Assign the aliases DEV, UAT, and PROD to each version.
+
+    <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: B. 
+    </details>
+
+63. A development team has started using AWS CloudFormation for deploying Lambda functions. Their project structure places the source code for the Lambda function locally within a directory named “tutorialsdojo”. The lambda handler for the function is in a file called “app.js”. Below is a snippet of their template.
+    <picture>
+    <img src="https://td-portal-cdn.tutorialsdojo.com/wp-content/uploads/2019/12/aws-cda-practice-exam-cf-code-snippet-for-serverless-function.jpg"></img>
+    </picture><BR>
+    What is the next step in order for the template to be deployed using the aws cloudformation deploy CLI?
+
+    - A. Use the Fn::Base64 intrinsic function inline with the CodeUri property to encode the content of the app.js file.	
+    - B. Use the aws cloudformation package command to upload the local artifacts of the Lambda function to an S3 bucket and produce a version of the template with references to the S3 URI of the file.
+    - C. Upload the app.js file to an S3 bucket. Update the CodeUri property in the template to point to the S3 URI of the file.	
+    - D. Package the Lambda function in a ZIP file. Specify the local path of the packaged file in the CodeUri property.
+
+    <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: B. 
+    </details>
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
 
     
 
