@@ -23,7 +23,7 @@ layout: exam
     - D. Set up an Amazon DynamoDB Accelerator (DAX) caching layer in front of the DynamoDB table.
 
 <details markdown=1><summary markdown='span'>Answer</summary>
-      Correct answer: D
+      Correct answer: D. 
     Amazon DynamoDB Accelerator (DAX) is a fully managed, highly available, in-memory cache for DynamoDB that delivers up to a 10x performance improvement – from milliseconds to microseconds – even at millions of requests per second. DAX does all the heavy lifting required to add in-memory acceleration to your DynamoDB tables without requiring developers to manage cache invalidation, data population, or cluster management.
 This will enable you to focus on building great applications for your customers without worrying about performance at scale. You do not need to modify application logic since DAX is compatible with existing DynamoDB API calls. You can enable DAX with just a few clicks in the AWS Management Console or using the AWS SDK. Just as with DynamoDB, you only pay for the capacity you provision.
 </details>
