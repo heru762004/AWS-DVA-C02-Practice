@@ -221,8 +221,9 @@ layout: exam
     </details>
 
 20. You are developing a Lambda function which processes event notifications from Amazon S3. It is expected that the function will have:
-    50 requests per second
-    100 seconds to complete each request
+    - 50 requests per second
+    - 100 seconds to complete each request
+    
     What should you do to prevent any issues when the function has been deployed and becomes operational?
 
     - A. Implement exponential backoff in your application.
