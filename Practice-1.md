@@ -220,6 +220,23 @@ layout: exam
           Correct answer: A. 
     </details>
 
+20. You are developing a Lambda function which processes event notifications from Amazon S3. It is expected that the function will have:
+    50 requests per second
+    100 seconds to complete each request
+    What should you do to prevent any issues when the function has been deployed and becomes operational?
+
+    - A. Implement exponential backoff in your application.
+    - B. Increase the concurrency limit of the function.
+    - C. Request for AWS to increase the limit of your concurrent executions.
+    - D. No additional action needed since Lambda will automatically scale based on the incoming requests.
+
+    <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: A. 
+    </details>
+    
+
+
+
 
 
 
