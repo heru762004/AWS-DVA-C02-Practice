@@ -26,4 +26,16 @@ layout: exam
        Correct answer: B
      </details>
 
+3. You work as a developer doing contract work for the government on AWS gov cloud. Your applications use Amazon Simple Queue Service (SQS) for its message queue service. Due to recent hacking attempts, security measures have become stricter and require you to store data in encrypted queues. Which of the following steps can you take to meet your requirements without making changes to the existing code?
+
+   - A. Enable SQS KMS encryption
+   - B. Use Secrets Manager
+   - C. Use Client side encryption
+   - D. Use the SSL endpoint
+
+   <details markdown=1><summary markdown='span'>Answer</summary>
+       Correct answer: A
+   </details>
+
+
 
