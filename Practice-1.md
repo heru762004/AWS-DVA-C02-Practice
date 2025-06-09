@@ -460,6 +460,168 @@ layout: exam
           Correct answer: A, C. 
     </details>
 
+41. A developer is building a photo-sharing application that automatically enhances images uploaded by users to Amazon S3. When a user uploads an image, its S3 path is sent to an image-processing application hosted on AWS Lambda. The Lambda function applies the selected filter to the image and stores it back to S3. If the upload is successful, the application will return a prompt telling the user that the request has been accepted. The entire processing typically takes an average of 5 minutes to complete, which causes the application to become unresponsive. Which of the following is the MOST suitable and cost-effective option which will prevent the application from being unresponsive?
+
+    - A. Use a combination of Lambda and Step Functions to orchestrate service components and asynchronously process the requests.
+    - B. Configure the application to asynchronously process the requests and change the invocation type of the Lambda function to Event.	
+    - C. Configure the application to asynchronously process the requests and use the default invocation type of the Lambda function.
+    - D. Use AWS Serverless Application Model (AWS SAM) to allow asynchronous requests to your Lambda function.
+
+    <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: B. 
+    </details>
+
+42. A developer has an application that uses a Lambda function to process data from an Aurora MySQL DB Instance in a Virtual Private Cloud (VPC). The database throws a MySQL: ERROR 1040: Too many connections error whenever there is a surge in incoming traffic. Which is the most suitable solution for resolving the issue?
+
+    - A. Increase the concurrency limit of the Lambda function
+    - B. Increase the allocated memory of your function.
+    - C. Increase the value of the max_connections parameter of the Aurora MySQL DB Instance.	
+    - D. Provision an RDS Proxy between the Lambda function and the RDS database instance
+
+    <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: D. 
+    </details>
+
+43. You want to update a Lambda function on your production environment and ensure that when you publish the updated version, you still have a quick way to roll back to the older version in case you encountered a problem. To prevent any sudden user interruptions, you want to gradually increase the traffic going to the new version. Which of the following implementation is the BEST option to use?
+
+    - A. Use Traffic Shifting with Lambda Aliases.
+    - B. Use ELB to route traffic to both Lambda functions.
+    - C. Use Route 53 weighted routing to two Lambda functions.
+    - D. Use stage variables in your Lambda function.
+
+    <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: A. 
+    </details>
+
+44. A developer is creating a script using AWS CLI to retrieve a list of objects in an S3 bucket. However, the script is timing out if the bucket has tens of thousands of objects. Which solution would most likely rectify the issue?
+
+    - A. Enable Amazon S3 Transfer Acceleration
+    - B. Increase the AWS CLI timeout value
+    - C. Apply the pagination parameters in the AWS CLI command
+    - D. Enable CORS
+
+    <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: C. 
+    </details>
+
+45. A company operates an e-commerce website on Amazon Elastic Container Service (ECS) behind an Application Load Balancer (ALB). They’ve set their ALB as an origin for an Amazon CloudFront distribution. Users interact with the website via a custom domain linked to the CloudFront distribution, all maintained within a public hosted zone in Amazon Route 53. The company wants to display region-specific pricing tables to its users. For example, when a user from the UK visits the site, they should be redirected to https://tutorialsdojo.com/uk/, while users from the Philippines should view prices on https://tutorialsdojo.com/ph/
+How can a developer incorporate this feature in the least amount of development overhead?
+
+    - A. Forward the CloudFront-Viewer-Address header to the web server running on the ECS cluster. Implement a custom logic that matches the header’s value against a GeoIP database to determine user location. Based on the resolved location, redirect users to the appropriate region-specific URL.	
+    - B. Configure the Route 53 record to use the geolocation routing policy.
+    - C. Implement a CloudFront function that returns the appropriate URL based on the CloudFront-Viewer-Country. Configure the distribution to trigger the function on Viewer request events.	
+    - D. Use AWS Web Application Firewall (WAF's) geo-matching rule to identify the user country and attach it to the ALB. Configure ALB listener rules with path conditions to route traffic based on the identified country.
+
+      <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: C. 
+    </details>
+
+46. A company offers a Generative Artificial Intelligence (AI) service exposed through a REST API managed by Amazon API Gateway. They recently rolled out a subscription tier where users receive API keys to access premium features. The company uses the CreateApiKey API for generating these keys. During testing, developers noticed that while existing users can access the service without issues, new premium subscribers get a 403 Forbidden error when using their API keys. What must be done to give new users access to the service?
+
+    - A. Use the ImportApiKeys operation to import the premium users’ keys, then apply the UpdateUsagePlan operation to set the new tier access.	
+    - B. Instruct users to send their API key in a custom header. In the integration request, adjust the mapping template to extract and evaluate this header to distinguish between free-tier and premium subscribers.
+    - C. Use the UpdateAuthorizer operation to modify the authorization settings. Promote the changes to the production stage by calling the CreateDeployment operation.
+    - D. Associate the API keys for the premium users with the intended usage plan using the CreateUsagePlanKey operation.
+
+    <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: D. 
+    </details>
+
+47. A developer is managing a serverless application orchestrated by AWS Step Functions. One of the Lambda functions sends an API call to a third-party payment service, which takes some time to complete. The Step Functions workflow needs to pause while the service validates the payment. It should only resume after the service sends a notification to a webhook endpoint. Which combination of actions will fulfill the requirements in the most cost-effective manner? (Select Two)
+
+    - A. Configure the webhook handler to call the SendTaskHeartbeat method after a successful notification.	
+    - B. Configure the Lambda function task state to use the waitForTaskToken option. Retrieve the task token from the context object of the state machine and include it as part of the Lambda function’s payload body.	
+    - C. Configure the webhook handler to call the SendTaskSuccess method after a successful notification.	
+    - D. Use a Wait State to pause the execution of the workflow. Configure the webhook handler to invoke the Lambda function synchronously.
+    - E. Set the invocation method of the Lambda function task state to asynchronous. Create an AWS SQS queue and configure the webhook handler to send the payment service’s response to the queue. Use a combination of Wait State and Choice State to poll the queue.
+
+    <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: B, C. 
+    </details>
+
+48. A developer is building a web application which requires a multithreaded event-based key/value cache store that will cache result sets from database calls. You need to run large nodes with multiple cores for your cache layer and it should scale up or down as the demand on your system increases and decreases. Which of the following is the MOST suitable service that you should use?
+
+    - A. AWS Greengrass
+    - B. Amazon ElastiCache for Memcached
+    - C. Amazon ElastiCache for Redis
+    - D. Amazon CloudFront
+
+    <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: B. 
+    </details>
+
+49. A web application is running in an ECS Cluster and updates data in DynamoDB several times a day. The clients retrieve data directly from the DynamoDB through APIs exposed by Amazon API Gateway. Although API caching is enabled, there are specific clients that want to retrieve the latest data from DynamoDB for every API request sent. What should be done to only allow authorized clients to invalidate an API Gateway cache entry when submitting API requests? (Select TWO.)
+
+    - A. Tick the Require Authorization checkbox in the Cache Settings of your API via the console.	
+    - B. The client must send a request which contains the Cache-Control: max-age=1 header.	
+    - C. The client must send a request which contains the Cache-Control: max-age=0 header.	
+    - D. Modify the cache settings to retrieve the latest data from DynamoDB if the request header's authorization signature matches your API's trusted clients list.
+    - E. Provide your clients an authorization token from STS to query data directly from DynamoDB.
+
+    <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: A, C. 
+    </details>
+
+50. A new IT policy requires you to trace all calls that your Node.js application sends to external HTTP web APIs as well as SQL database queries. You have to instrument your application, which is hosted in Elastic Beanstalk, in order to properly trace the calls via the X-Ray console. What should you do to comply with the given requirement?
+
+    - A. Enable active tracing in the Elastic Beanstalk by including the healthcheckurl.config configuration file in the .ebextensions directory of your source code.	
+    - B. Use a user data script to run the daemon automatically.
+    - C. Create a Docker image that runs the X-Ray daemon.
+    - D. Enable the X-Ray daemon by including the xray-daemon.config configuration file in the .ebextensions directory of your source code.
+
+    <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: D. 
+    </details>
+
+51. A developer is building an e-commerce application which will be hosted in an ECS Cluster. To minimize the number of instances in use, she must select a strategy which will place tasks based on the least available amount of CPU or memory. Which of the following task placement strategy should the developer implement?
+
+    - A. distinctInstance
+    - B. spread
+    - C. binpack
+    - D. random
+      
+    <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: C. 
+    </details>
+
+52. The users of a social media website must be authenticated using social identity providers such as Twitter, Facebook, and Google. Users can login to the site which will allow them to upload their selfies, memes, and other media files in an S3 bucket. As an additional feature, you should also enable guest user access to certain sections of the website. Which of the following should you do to accomplish this task?
+
+    - A. Create a User Pool in Amazon Cognito and enable access to unauthenticated identities.
+    - B. Create a custom identity broker which integrates with the AWS Security Token Service and supports unauthenticated access.
+    - C. Create an Identity Pool in Amazon Cognito and enable access to unauthenticated identities.
+    - D. Integrate AWS IAM Identity Center with your website.
+
+    <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: C. 
+    </details>
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
 
 
 
