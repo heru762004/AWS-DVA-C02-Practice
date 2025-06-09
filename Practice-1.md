@@ -723,6 +723,29 @@ How can a developer incorporate this feature in the least amount of development 
           Correct answer: B. 
     </details>
 
+64. A company follows collaborative development practices. The engineering manager wants to isolate the development effort by setting up simulations of API components owned by various development teams. Which API integration type is best suited for this requirement?
+
+    - A. HTTP
+    - B. HTTP_PROXY
+    - C. MOCK
+    - D. AWS_PROXY
+
+    <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: C. 
+    </details>
+
+65. A junior developer working on ECS instances terminated a container instance in Amazon Elastic Container Service (Amazon ECS) as per instructions from the team lead. But the container instance continues to appear as a resource in the ECS cluster. As a Developer Associate, which of the following solutions would you recommend to fix this behavior?
+
+    - A. The container instance has been terminated with AWS CLI, whereas, for ECS instances, Amazon ECS CLI should be used to avoid any synchronization issues
+    - B. A custom software on the container instance could have failed and resulted in the container hanging in an unhealthy state till restarted again
+    - C. You terminated the container instance while it was in RUNNING state, that lead to this synchronization issues
+    - D. You terminated the container instance while it was in STOPPED state, that lead to this synchronization issues
+
+    <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: D. 
+    </details>
+
+
 
 
 
