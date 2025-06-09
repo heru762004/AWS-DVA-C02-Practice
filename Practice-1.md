@@ -186,15 +186,11 @@ layout: exam
           Correct answer: B. 
     </details>
 
-17. 
-
-A web application is using an ElastiCache cluster that is suffering from cache churn. A developer needs to reconfigure the application so that data are retrieved from the database only in the event that there is a cache miss.
-
-Which pseudocode illustrates the caching strategy that the developer needs to implement?
+17. A web application is using an ElastiCache cluster that is suffering from cache churn. A developer needs to reconfigure the application so that data are retrieved from the database only in the event that there is a cache miss. Which pseudocode illustrates the caching strategy that the developer needs to implement?
 
 
 
-    - A. > get_item(item_id, item_value):
+    - A. get_item(item_id, item_value):
 
         item_value = database.query("UPDATE Items WHERE id = ?", item_id, item_value)
 
@@ -204,7 +200,7 @@ Which pseudocode illustrates the caching strategy that the developer needs to im
 
 
 
-    - B. > get_item(item_id):
+    - B. get_item(item_id):
 
         item_value = cache.get(item_id)
 
@@ -218,7 +214,7 @@ Which pseudocode illustrates the caching strategy that the developer needs to im
 
 
 
-    - C. > get_item(item_id):
+    - C. get_item(item_id):
 
         item_value = database.query("SELECT * FROM Items WHERE id = ?", item_id)
 
@@ -232,7 +228,7 @@ Which pseudocode illustrates the caching strategy that the developer needs to im
 
 
 
-    - D. > get_item(item_id):
+    - D. get_item(item_id):
 
         item_value = cache.get(item_id)
 
@@ -248,6 +244,9 @@ Which pseudocode illustrates the caching strategy that the developer needs to im
 
             return item_value
 
+    <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: B. 
+    </details>
 
 
 
