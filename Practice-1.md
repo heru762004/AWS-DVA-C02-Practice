@@ -186,63 +186,12 @@ layout: exam
           Correct answer: B. 
     </details>
 
-17. A web application is using an ElastiCache cluster that is suffering from cache churn. A developer needs to reconfigure the application so that data are retrieved from the database only in the event that there is a cache miss. Which pseudocode illustrates the caching strategy that the developer needs to implement?
+17. A developer is creating an analytics REST API service that is powered by API Gateway. Analysts from a separate AWS account must interact with the service through an IAM role. The IAM role already has a policy that grants permission to invoke the API. What else should the developer do to meet the requirement without too much overhead?
 
-
-
-    - A. get_item(item_id, item_value):
-
-        item_value = database.query("UPDATE Items WHERE id = ?", item_id, item_value)
-
-        cache.add(item_id, item_value)
-
-        return 'ok'
-
-
-
-    - B. get_item(item_id):
-
-        item_value = cache.get(item_id)
-
-        if item_value is None:
-
-            item_value = database.query("SELECT * FROM Items WHERE id = ?", item_id)
-
-            cache.add(item_id, item_value)
-
-        return item_value
-
-
-
-    - C. get_item(item_id):
-
-        item_value = database.query("SELECT * FROM Items WHERE id = ?", item_id)
-
-        if item_value is None:
-
-            item_value = cache.set(item_id, item_value)
-
-            cache.add(item_id, item_value)
-
-        return item_value
-
-
-
-    - D. get_item(item_id):
-
-        item_value = cache.get(item_id)
-
-        if item_value is not None:
-
-            item_value = database.query("SELECT * FROM Items WHERE id = ?", item_id)
-
-            cache.add(item_id, item_value)
-
-            return item_value
-
-        else:
-
-            return item_value
+    - A. Create a Lambda function authorizer for the API. In the Lambda function, write a logic that verifies the requester’s identity by extracting the information from the context object.
+    - B. Set AWS_IAM as the method authorization type for the API. Attach a resource policy to the API that grants permission to the specified IAM role to invoke the execute-api:Invoke action.
+    - C. Create an API Key for the API. Attach a resource policy to the API that grants permission to the specified IAM role to invoke the GetAPIKeys action.
+    - D. Create a Cognito User Pool authorizer. Add the IAM role to the user pool. Authenticate the requester’s identity using Cognito. Ask the analysts to pass the token returned by Cognito in their request headers.
 
     <details markdown=1><summary markdown='span'>Answer</summary>
           Correct answer: B. 
