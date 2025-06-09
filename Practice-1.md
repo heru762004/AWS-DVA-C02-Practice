@@ -119,5 +119,141 @@ layout: exam
           Correct answer: C, E. 
     </details>
 
+11. An application performs various workflows and processes long-running tasks that take a long time to complete. Users are complaining that the application is unresponsive since the workflow substantially increases the time it takes to complete a user request. The development team is looking for a managed solution that can handle background tasks efficiently, scale automatically, and integrate seamlessly with the existing application deployed on Elastic Beanstalk. Which of the following is the BEST way to improve the performance of the application?
+
+    - A. Spawn a worker process locally in the EC2 instances and process the tasks asynchronously.
+    - B. Use a multicontainer docker environment in Elastic Beanstalk to process the long-running tasks asynchronously.
+    - C. Use an Amazon ECS Cluster with a Fargate launch type to process the tasks asynchronously.
+    - D. Use an Elastic Beanstalk worker environment to process the tasks asynchronously.
+
+    <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: D. 
+    </details>
+
+12. A website is hosted in an Auto Scaling group of EC2 instances behind an Application Load Balancer. It also uses CloudFront with a default domain name to distribute its static assets and dynamic contents. However, the website has a poor search ranking as it doesn’t use a secure HTTPS/SSL on its site. Which are the possible solutions that the developer can implement in order to set up HTTPS communication between the viewers and CloudFront? (Select TWO.)
+
+    - A. Set the Viewer Protocol Policy to use Redirect HTTP to HTTPS.
+    - B. Use a self-signed certificate in the ALB.
+    - C. Set the Viewer Protocol Policy to use HTTPS Only.
+    - D. Use a self-signed SSL/TLS certificate in the ALB which is stored in a private S3 bucket.
+    - E. Configure the ALB to use its default SSL/TLS certificate.
+
+   <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: A, C. 
+    </details>
+
+13. An application hosted in an Amazon ECS Cluster processes a large data stream and stores the result in a DynamoDB table. There is an urgent requirement to detect new entries in the table and automatically trigger a Lambda function to run some verification tests on the processed data. Which of the following options can satisfy the requirement with minimal configuration?
+
+    - A. Run the Lambda function using SNS each time the ECS Cluster successfully processes financial data.
+    - B. Set up an Amazon EventBridge (Amazon CloudWatch Events) rule to automatically trigger the Lambda function whenever a new entry is created in the DynamoDB table.
+    - C. Detect the new entries in the DynamoDB table using AWS Copilot, then automatically invoke the Lambda function for processing.
+    - D. Enable DynamoDB Streams to detect the new entries and automatically trigger the Lambda function.
+   
+    <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: D. 
+    </details>
+
+14. A developer configured an Amazon API Gateway proxy integration named MyAPI to work with a Lambda function. However, when the API is being called, the developer receives a 502 Bad Gateway error. She tried invoking the underlying function, but it properly returned the result in XML format. What is the MOST likely root cause of this issue?
+
+    - A. The endpoint request timed-out.
+    - B. There has been an occasional out-of-order invocation due to heavy loads.
+    - C. There is an incompatible output returned from a Lambda proxy integration backend.
+    - D. The API name of the Amazon API Gateway proxy is invalid.
+
+    <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: C. 
+    </details>
+
+15. A developer has recently completed a new version of a serverless application that is ready to be deployed using AWS SAM. There is a requirement that the traffic should shift from the previous Lambda function to the new version in the shortest time possible, but you still don’t want to shift traffic all-at-once immediately. Which deployment configuration is the MOST suitable one to use in this scenario?
+
+    - A. CodeDeployDefault.LambdaLinear10PercentEvery1Minute
+    - B. CodeDeployDefault.HalfAtATime
+    - C. CodeDeployDefault.LambdaLinear10PercentEvery2Minutes
+    - D. CodeDeployDefault.LambdaCanary10Percent5Minutes
+
+    <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: D. 
+    </details>
+
+16. A website hosted in AWS has a custom CloudWatch metric to track all HTTP server errors in the site every minute, which occurs intermittently. An existing CloudWatch Alarm has already been configured for this metric but you would like to re-configure this to properly monitor the application. The alarm should only be triggered when all three data points in the most recent three consecutive periods are above the threshold. Which of the following options is the MOST appropriate way to monitor the website based on the given threshold?
+
+    - A. Set both the Period and Datapoints to Alarm to 3.
+    - B. Set both the Evaluation Period and Datapoints to Alarm to 3.
+    - C. Use high-resolution metrics.
+    - D. Use metric math in CloudWatch to properly compute the threshold.
+
+    <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: B. 
+    </details>
+
+17. 
+
+A web application is using an ElastiCache cluster that is suffering from cache churn. A developer needs to reconfigure the application so that data are retrieved from the database only in the event that there is a cache miss.
+
+Which pseudocode illustrates the caching strategy that the developer needs to implement?
+
+
+
+    - A. > get_item(item_id, item_value):
+
+        item_value = database.query("UPDATE Items WHERE id = ?", item_id, item_value)
+
+        cache.add(item_id, item_value)
+
+        return 'ok'
+
+
+
+    - B. > get_item(item_id):
+
+        item_value = cache.get(item_id)
+
+        if item_value is None:
+
+            item_value = database.query("SELECT * FROM Items WHERE id = ?", item_id)
+
+            cache.add(item_id, item_value)
+
+        return item_value
+
+
+
+    - C. > get_item(item_id):
+
+        item_value = database.query("SELECT * FROM Items WHERE id = ?", item_id)
+
+        if item_value is None:
+
+            item_value = cache.set(item_id, item_value)
+
+            cache.add(item_id, item_value)
+
+        return item_value
+
+
+
+    - D. > get_item(item_id):
+
+        item_value = cache.get(item_id)
+
+        if item_value is not None:
+
+            item_value = database.query("SELECT * FROM Items WHERE id = ?", item_id)
+
+            cache.add(item_id, item_value)
+
+            return item_value
+
+        else:
+
+            return item_value
+
+
+
+
+
+
+
+
 
 
