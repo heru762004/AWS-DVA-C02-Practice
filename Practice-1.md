@@ -15,6 +15,7 @@ layout: exam
       Correct answer: B
 </details>
 
+
 2. A mobile game has a serverless backend consisting of an API Gateway backed by Lambda functions and a DynamoDB table in provisioned capacity mode, where player data is stored. While the game has maintained a consistent level of traffic, recent growth in the player base has caused response times to slow down. To improve performance, the developer wants to reduce the number of database queries for data that rarely change. What approach can the developer take to achieve this goal cost-effectively and with less development overhead?
 
     - A. Create an Amazon MemoryDB for Redis database in front of the DynamoDB table to cache data.
@@ -25,6 +26,7 @@ layout: exam
 <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: D. 
 </details>
+
 
 3. A developer is managing a distributed system that consists of an Application Load Balancer, an SQS queue, and an Auto Scaling group of EC2 instances. The system has been integrated with CloudFront to better serve clients worldwide. To enhance the security of the in-flight data, the developer was instructed to establish an end-to-end SSL connection between the origin and the end-users. Which TWO options will allow the developer to meet this requirement using CloudFront? (Select TWO.)
 
