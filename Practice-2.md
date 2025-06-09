@@ -92,6 +92,28 @@ layout: exam
      <details markdown=1><summary markdown='span'>Answer</summary>
         Correct answer: D
      </details>
-     
+
+9. A developer is defining the signers that can create signed URLs for their Amazon CloudFront distributions. Which of the following statements should the developer consider while defining the signers? (Select two)
+
+   - A. You can also use AWS Identity and Access Management (IAM) permissions policies to restrict what the root user can do with CloudFront key pairs
+   - B. CloudFront key pairs can be created with any account that has administrative permissions and full access to CloudFront resources
+   - C. Both the signers (trusted key groups and CloudFront key pairs) can be managed using the CloudFront APIs
+   - D. When you create a signer, the public key is with CloudFront and private key is used to sign a portion of URL
+   - E. When you use the root user to manage CloudFront key pairs, you can only have up to two active CloudFront key pairs per AWS account
+
+     <details markdown=1><summary markdown='span'>Answer</summary>
+        Correct answer: D, E
+     </details>
+
+10. You were assigned to a project that requires the use of the AWS CLI to build a project with AWS CodeBuild. Your project's root directory includes the buildspec.yml file to run build commands and would like your build artifacts to be automatically encrypted at the end. How should you configure CodeBuild to accomplish this?
+    
+    - A. Use an AWS Lambda Hook
+    - B. Use In Flight encryption (SSL)
+    - C. Specify a KMS key to use
+    - D. Use the AWS Encryption SDK
+
+      <details markdown=1><summary markdown='span'>Answer</summary>
+        Correct answer: C
+     </details>
 
 
