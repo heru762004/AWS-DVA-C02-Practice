@@ -382,6 +382,20 @@ layout: exam
           Correct answer: D. 
     </details>
 
+34. A developer is moving a legacy web application from their on-premises data center to AWS. The application is used simultaneously by thousands of users, and their session states are stored in memory. The on-premises server usually reaches 100% CPU Utilization every time there is a surge in the number of people accessing the application. Which of the following is the best way to re-factor the performance and availability of the application’s session management once it is migrated to AWS?
+
+    - A. Use an ElastiCache for Redis cluster to store the user session state of the application.
+    - B. Store the user session state of the application using CloudFront.
+    - C. Use Sticky Sessions with Local Session Caching.
+    - D. Use an ElastiCache for Memcached cluster to store the user session state of the application.
+
+    <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: A. 
+    </details>
+    
+
+
+
 
 
 
