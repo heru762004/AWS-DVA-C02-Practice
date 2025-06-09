@@ -50,3 +50,40 @@ layout: exam
     <details markdown=1><summary markdown='span'>Answer</summary>
           Correct answer: A. 
     </details>
+
+5. A recently deployed Lambda function has an intermittent issue in processing customer data. You enabled the active tracing option in order to detect, analyze, and optimize performance issues of your function using the X-Ray service. Which of the following environment variables are used by AWS Lambda to facilitate communication with X-Ray? (Select TWO.)
+
+    - A. AWS_XRAY_DEBUG_MODE	
+    - B. AWS_XRAY_TRACING_NAME	
+    - C. _X_AMZN_TRACE_ID	
+    - D. AWS_XRAY_CONTEXT_MISSING	
+    - E. AUTO_INSTRUMENT	
+
+    <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: C, D. 
+    </details>
+
+6. Your serverless AWS Lambda functions are integrated with Amazon API gateway using Lambda proxy integration. The API caching feature is enabled in the API Gateway with a TTL value of 300 seconds. A client would like to fetch the latest data from your endpoints every time a request is sent and invalidate the existing cache. What should the client do in order to get the latest data?
+
+    - A. Modify cache TTL value to a shorter period.
+    - B. Have the client send a request with the Cache-Control: max-age=0 header.	
+    - C. Have the client send a request with the Cached: false header.	
+    - D. Override API caching by allowing the client to send requests to the endpoint directly.
+
+    <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: B. 
+    </details>
+
+7. A developer is planning to deploy a high-performance online trading application which requires a database that can scale globally and can handle frequent schema changes. The database should also support flexible schemas that enable faster and more iterative development. Which is the MOST suitable database service that you should use to achieve this requirement?
+
+    - A. Amazon RDS
+    - B. Amazon Aurora
+    - C. Amazon DynamoDB
+    - D. Amazon Redshift
+
+    <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: C. 
+    </details>
+
+
+
