@@ -197,6 +197,31 @@ layout: exam
           Correct answer: B. 
     </details>
 
+18. An API gateway with a Lambda proxy integration takes a long time to complete its processing. There were also occurrences where some requests timed out. You want to monitor the responsiveness of your API calls as well as the underlying Lambda function. Which of the following CloudWatch metrics should you use to troubleshoot this issue? (Select TWO.)
+
+    - A. IntegrationLatency
+    - B. Latency
+    - C. Count
+    - D. CacheMissCount
+    - E. CacheHitCount
+
+    <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: A, B. 
+    </details>
+
+19. A company selling smart security cameras uses an S3 bucket behind a CloudFront web distribution to store its static content, which it shares with customers worldwide. The company has recently released a new firmware update intended only for its premium customers, and unauthorized access should be denied with a user authentication process that has minimal latency. How can a developer refactor the current setup to achieve this requirement with the MOST efficient solution?
+
+    - A. Use Lambda@Edge and Amazon Cognito to authenticate and authorize premium customers to download the firmware update.
+    - B. Use the AWS Serverless Application Model (AWS SAM) and Amazon Cognito to authenticate the premium customers.
+    - C. Restrict access to the S3 bucket only to premium customers using an Origin Access Control (OAC).
+    - D. Use Signed URLs and Signed Cookies in CloudFront to distribute the firmware update file
+
+    <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: A. 
+    </details>
+
+
+
 
 
 
