@@ -234,6 +234,9 @@ layout: exam
     <details markdown=1><summary markdown='span'>Answer</summary>
           Correct answer: A. 
     </details>
+
+21. A mobile game is using a DynamoDB table named GameScore that keeps track of users and scores. Each item in the table is identified by a partition key (UserId) and a sort key (GameTitle). The diagram below shows how the items in the table are organized:
+    (https://td-portal-cdn.tutorialsdojo.com/wp-content/uploads/2019/12/cda1-59.png)
     
 
 
