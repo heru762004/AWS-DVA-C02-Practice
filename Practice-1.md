@@ -360,6 +360,32 @@ layout: exam
           Correct answer: D. 
     </details>
 
+32. A company has a microservices application that must be integrated with API Gateway. The developer must configure custom data mapping between the API Gateway and the microservices. In addition, the developer must specify how the incoming request data is mapped to the integration request and how the resulting integration response data is mapped to the method response. Which of the following integration types is the MOST suitable one to use in API Gateway to meet this requirement?
+
+    - A. AWS	
+    - B. HTTP	
+    - C. AWS_PROXY	
+    - D. HTTP_PROXY
+
+    <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: B. 
+    </details>
+
+33. To improve their information security management system (ISMS), a company recently released a new policy which requires all database credentials to be encrypted and be automatically rotated to avoid unauthorized access. Which of the following is the MOST appropriate solution to secure the credentials?
+
+    - A. Create an IAM Role which has full access to the database. Attach the role to the services which require access.
+    - B. Create a parameter to the Systems Manager Parameter Store using the PutParameter API with a type of SecureString.	
+    - C. Enable IAM DB authentication which rotates the credentials by default.
+    - D. Create a secret in AWS Secrets Manager and enable automatic rotation of the database credentials.
+
+    <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: D. 
+    </details>
+
+
+
+
+
 
 
     
