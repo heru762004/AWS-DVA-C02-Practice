@@ -239,6 +239,30 @@ layout: exam
     <picture>
     <img src="https://td-portal-cdn.tutorialsdojo.com/wp-content/uploads/2019/12/cda1-59.png"></img>
     </picture>
+    A developer wants to write a leaderboard application to display the top scores for each game. How can the developer meet the requirement in the MOST efficient manner?
+
+    - A. Create a global secondary index. Assign the GameTitle attribute as the partition key and the TopScore attribute as the sort key.
+    - B. Create a local secondary index. Assign the TopScore attribute as the partition key and the GameTitle attribute as the sort key.
+    - C. Create a local secondary index. Assign the GameTitle attribute as the partition key and the TopScore attribute as the sort key.
+    - D. Use the Scan operation and filter the results based on a GameTitle value.
+   
+    <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: A. 
+    </details>
+
+22. You have several API Gateway APIs with Lambda Integration for each release life cycle of your application. There is a requirement to consolidate multiple releases into a single API Gateway for the ALPHA, BETA, RC (Release Candidate), and PROD releases. For example, their clients can connect to their ALPHA release by using the alpha.tutorialsdojo.com endpoint and beta release through the beta.tutorialsdojo.com endpoint. As the AWS developer, how can you satisfy this requirement?
+
+    - A. Use Layers to the underlying Lambda functions of the API Gateway.
+    - B. Modify the Integration Response of the API Gateway to add different endpoints for each release.
+    - C. Modify the Integration Request of the API Gateway to manage different endpoints for each release.
+    - D. Set up Stage Variables for each release.
+
+    <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: D. 
+    </details>
+
+
+
     
 
 
