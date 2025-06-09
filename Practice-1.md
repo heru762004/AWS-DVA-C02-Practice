@@ -85,5 +85,39 @@ layout: exam
           Correct answer: C. 
     </details>
 
+8. An application, which already uses X-Ray, generates thousands of trace data every hour. The developer wants to use a filter expression that will limit the results based on custom attributes or keys that he specifies. How should the developer refactor the application in order to filter the results in the X-Ray console?
+
+    - A. Create a new sampling rule based on the custom attributes.
+    - B. Add the custom attributes as annotations in your segment document.
+    - C. Add the custom attributes as metadata in your segment document.
+    - D. Include the custom attributes as new segment fields in the segment document.
+
+    <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: B. 
+    </details>
+
+9. You are building a distributed system using KMS where you need to encrypt data at a later time. An API must be called that returns only the encrypted copy of the data key which you will use for encryption. After an hour, you will decrypt the data key by calling the Decrypt API then using the returned plaintext data key to finally encrypt the data. Which is the MOST suitable KMS API that the system should use to securely implement the requirements described above?
+
+    - A. GenerateRandom	
+    - B. GenerateDataKeyWithoutPlaintext	
+    - C. GenerateDataKey	
+    - D. Encrypt	
+
+    <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: B. 
+    </details>
+
+10. A reporting application is hosted in AWS Elastic Beanstalk and uses Amazon DynamoDB as its database. If a user requests data, the application scans the entire table and returns the requested data. The table is expected to grow due to the surge of new users and the increase in requests for reports in the coming weeks. Which of the following should be done as a preparation to improve the application’s performance with minimal cost? (Select TWO.)
+
+    - A. Set the ScanIndexForward parameter to control the order of query results.
+    - B. Increase the Write Compute Unit (WCU) of the table
+    - C. Use Query operations instead
+    - D. Use DynamoDB Accelerator (DAX)
+    - E. Reduce page size
+
+    <details markdown=1><summary markdown='span'>Answer</summary>
+          Correct answer: C, E. 
+    </details>
+
 
 
