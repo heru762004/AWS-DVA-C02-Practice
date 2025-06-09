@@ -238,7 +238,7 @@ layout: exam
 21. A mobile game is using a DynamoDB table named GameScore that keeps track of users and scores. Each item in the table is identified by a partition key (UserId) and a sort key (GameTitle). The diagram below shows how the items in the table are organized:
     <picture>
     <img src="https://td-portal-cdn.tutorialsdojo.com/wp-content/uploads/2019/12/cda1-59.png"></img>
-    </picture>
+    </picture><BR>
     A developer wants to write a leaderboard application to display the top scores for each game. How can the developer meet the requirement in the MOST efficient manner?
 
     - A. Create a global secondary index. Assign the GameTitle attribute as the partition key and the TopScore attribute as the sort key.
