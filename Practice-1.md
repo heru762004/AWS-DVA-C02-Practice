@@ -8,8 +8,8 @@ layout: exam
 
 Which configuration file should the developer add to the source bundle to meet the above requirement?
     - A. env.yaml
-    - B. cron.yaml		
-    - C. appspec.yml	
+    - B. cron.yaml
+    - C. appspec.yml
     - D. Dockerrun.aws.json
 
 <details markdown=1><summary markdown='span'>Answer</summary>
