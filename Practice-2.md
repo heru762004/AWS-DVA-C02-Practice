@@ -32,10 +32,66 @@ layout: exam
    - B. Use Secrets Manager
    - C. Use Client side encryption
    - D. Use the SSL endpoint
+   
+     <details markdown=1><summary markdown='span'>Answer</summary>
+        Correct answer: A
+     </details>
 
-   <details markdown=1><summary markdown='span'>Answer</summary>
-       Correct answer: A
-   </details>
+4. A company stores confidential data on an Amazon Simple Storage Service (S3) bucket. New regulatory guidelines require that files be stored with server-side encryption. The encryption used must be Advanced Encryption Standard (AES-256) and the company does not want to manage S3 encryption keys. Which of the following options should you use?
 
+   - A. SSE-KMS
+   - B. Client Side Encryption
+   - C. SSE-S3
+   - D. SSE-C
+
+     <details markdown=1><summary markdown='span'>Answer</summary>
+        Correct answer: C
+     </details>
+
+5. Your company has embraced cloud-native microservices architectures. New applications must be dockerized and stored in a registry service offered by AWS. The architecture should support dynamic port mapping and support multiple tasks from a single service on the same container instance. All services should run on the same EC2 instance. Which of the following options offers the best-fit solution for the given use-case?
+   
+   - A. Application Load Balancer + ECS
+   - B. Classic Load Balancer + Beanstalk
+   - C. Application Load Balancer + Beanstalk
+   - D. Classic Load Balancer + ECS
+
+     <details markdown=1><summary markdown='span'>Answer</summary>
+        Correct answer: A
+     </details>
+
+6. A website serves static content from an Amazon Simple Storage Service (Amazon S3) bucket and dynamic content from an application load balancer. The user base is spread across the world and latency should be minimized for a better user experience. Which technology/service can help access the static and dynamic content while keeping the data latency low?
+
+   - A. Configure CloudFront with multiple origins to serve both static and dynamic content at low latency to global users
+   - B. Use CloudFront's Lambda@Edge feature to server data from S3 buckets and load balancer programmatically on-the-fly
+   - C. Use CloudFront's Origin Groups to group both static and dynamic requests into one request for further processing
+   - D. Use Global Accelerator to transparently switch between S3 bucket and load balancer for different data needs
+
+     <details markdown=1><summary markdown='span'>Answer</summary>
+        Correct answer: A
+     </details>
+
+7. A firm runs its technology operations on a fleet of Amazon EC2 instances. The firm needs a certain software to be available on the instances to support their daily workflows. The developer team has been told to use the user data feature of EC2 instances. Which of the following are true about the user data EC2 configuration? ( Select two)
+
+   - A. By default, user data runs only during the boot cycle when you first launch an instance
+   - B. By default, scripts entered as user data are executed with root user privileges
+   - C. When an instance is running, you can update user data by using root user credentials
+   - D. By default, scripts entered as user data do not have root user privileges for executing
+   - E. By default, user data is executed every time an EC2 instance is re-started
+
+     <details markdown=1><summary markdown='span'>Answer</summary>
+        Correct answer: A, B
+     </details>
+
+8. A .NET developer team works with many ASP.NET web applications that use EC2 instances to host them on IIS. The deployment process needs to be configured so that multiple versions of the application can run in AWS Elastic Beanstalk. One version would be used for development, testing, and another version for load testing. Which of the following methods do you recommend?
+
+   - A. Use only one Beanstalk environment and perform configuration changes using an Ansible script
+   - B. Create an Application Load Balancer to route based on hostname so you can pass on parameters to the development Elastic Beanstalk environment. Create a file in .ebextensions/ to know how to handle the traffic coming from the ALB
+   - C. You cannot have multiple development environments in Elastic Beanstalk, just one development and one production environment
+   - D. Define a dev environment with a single instance and a 'load test' environment that has settings close to production environment
+
+     <details markdown=1><summary markdown='span'>Answer</summary>
+        Correct answer: D
+     </details>
+     
 
 
